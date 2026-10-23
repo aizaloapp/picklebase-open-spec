@@ -1,0 +1,196 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PickleBase API",
+    "description": "Pro-grade Pickleball knowledge base, biomechanics analysis, doubles tactics, 3D court simulation, and DUPR IQ rating engine.",
+    "version": "2.3.0",
+    "contact": {
+      "name": "PickleBase Engineering",
+      "url": "https://picklebase.app",
+      "email": "auth@picklebase.app"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://picklebase.app",
+      "description": "Production Cloudflare Edge Server"
+    }
+  ],
+  "paths": {
+    "/api/mcp": {
+      "post": {
+        "summary": "Model Context Protocol (MCP) JSON-RPC Endpoint",
+        "description": "Stateless Streamable HTTP endpoint for AI agents executing tactical tools, trajectory simulations, and biomechanics lookups.",
+        "operationId": "callMcpRpc",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "jsonrpc": {
+                    "type": "string",
+                    "example": "2.0"
+                  },
+                  "id": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ]
+                  },
+                  "method": {
+                    "type": "string",
+                    "example": "tools/call"
+                  },
+                  "params": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "jsonrpc",
+                  "method"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JSON-RPC 2.0 Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "jsonrpc": {
+                      "type": "string",
+                      "example": "2.0"
+                    },
+                    "id": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "result": {
+                      "type": "object"
+                    },
+                    "error": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/matches": {
+      "get": {
+        "summary": "Get Curated Pro Matches",
+        "description": "Retrieve verified PPA/MLP tour matches with shot breakdowns, timestamps, and tactical bookmarks.",
+        "operationId": "getMatches",
+        "parameters": [
+          {
+            "name": "shot",
+            "in": "query",
+            "description": "Filter by shot slug (e.g., drip, dink, drop, erne)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tactic",
+            "in": "query",
+            "description": "Filter by tactic slug (e.g., the-freezer, stacking)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of curated matches",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "matches": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/coach/chat": {
+      "post": {
+        "summary": "AI Coach Consulting Endpoint",
+        "description": "Ask Head Coach (DUPR 5.5) tactical advice, mechanical fixes, or drill routines.",
+        "operationId": "coachChat",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "shotId": {
+                    "type": "string"
+                  },
+                  "duprLevel": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "AI Coach response stream or message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "reply": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

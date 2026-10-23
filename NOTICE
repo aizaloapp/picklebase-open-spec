@@ -1,0 +1,7 @@
+PickleBase Open Biomechanics & 3D Tactical Specification
+Copyright 2026 PickleBase Tactical Academy (https://picklebase.app)
+
+This repository contains open biomechanical specifications, OpenAPI schemas,
+and documentation links for PickleBase. Proprietary 3D physics engines,
+WebGL/Canvas rendering pipelines, and Cloudflare Edge functions remain the
+exclusive property of PickleBase Tactical Academy.

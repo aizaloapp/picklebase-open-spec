@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PickleBase 3D Biomechanics & Tactical Open Spec (2026)</title>
+  <meta name="description" content="Official open specification dataset for 18 Pickleball shot biomechanics, 11 pro doubles tactical formations, and 3D trajectory tools by PickleBase.">
+  <link rel="canonical" href="https://aizaloapp.github.io/picklebase-open-spec/en/">
+
+  <!-- 3-Way International Hreflang Tags -->
+  <link rel="alternate" hreflang="vi" href="https://aizaloapp.github.io/picklebase-open-spec/">
+  <link rel="alternate" hreflang="en" href="https://aizaloapp.github.io/picklebase-open-spec/en/">
+  <link rel="alternate" hreflang="x-default" href="https://aizaloapp.github.io/picklebase-open-spec/">
+
+  <!-- Open Graph (4x4 Guardrail) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PickleBase 3D Biomechanics & Tactical Open Spec (2026)">
+  <meta property="og:description" content="Official open specification dataset for 18 Pickleball shot biomechanics, 11 pro doubles tactical formations, and 3D trajectory tools by PickleBase.">
+  <meta property="og:url" content="https://aizaloapp.github.io/picklebase-open-spec/en/">
+  <meta property="og:image" content="https://picklebase.app/og-image.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card (4x4 Guardrail) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PickleBase 3D Biomechanics & Tactical Open Spec (2026)">
+  <meta name="twitter:description" content="Official open specification dataset for 18 Pickleball shot biomechanics, 11 pro doubles tactical formations, and 3D trajectory tools by PickleBase.">
+  <meta name="twitter:image" content="https://picklebase.app/og-image.jpg">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    html, body { max-width: 100vw; overflow-x: hidden; overflow-x: clip; background-color: #0B0F19; color: #f8fafc; }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://aizaloapp.github.io/picklebase-open-spec/en/#webpage",
+      "url": "https://aizaloapp.github.io/picklebase-open-spec/en/",
+      "name": "PickleBase 3D Biomechanics & Tactical Open Spec (2026)",
+      "description": "Official open specification dataset for 18 Pickleball shot biomechanics, 11 pro doubles tactical formations, and 3D trajectory tools by PickleBase.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://picklebase.app/#website"
+      },
+      "about": {
+        "@id": "https://picklebase.app/#organization"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://aizaloapp.github.io/picklebase-open-spec/en/#dataset",
+      "name": "PickleBase Open Pickleball Biomechanics & 3D Tactical Specification Dataset (EN)",
+      "description": "Official open specification dataset for 18 Pickleball shot biomechanics, 11 pro doubles tactical formations, and 3D trajectory tools by PickleBase.",
+      "url": "https://aizaloapp.github.io/picklebase-open-spec/en/",
+      "inLanguage": "en",
+      "license": "https://opensource.org/licenses/MIT",
+      "creator": {
+        "@type": "SportsOrganization",
+        "@id": "https://picklebase.app/#organization",
+        "name": "PickleBase Tactical Academy",
+        "url": "https://picklebase.app/en/",
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q141814048",
+          "https://doi.org/10.5281/zenodo.23582848",
+          "https://zenodo.org/records/23582848",
+          "https://huggingface.co/datasets/lekhoa288/picklebase-open-biomechanics",
+          "https://github.com/aizaloapp/picklebase-open-spec",
+          "https://aizaloapp.github.io/picklebase-open-spec/",
+          "https://aizaloapp.github.io/picklebase-open-spec/en/",
+          "https://www.npmjs.com/package/picklebase-mcp",
+          "https://pypi.org/project/picklebase-mcp/",
+          "https://clawhub.ai/aizaloapp/skills/picklebase-biomechanics-coach",
+          "https://chromewebstore.google.com/detail/picklebase/fodnbhemeinhfbeomholngiakpbkicjg"
+        ]
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://aizaloapp.github.io/picklebase-open-spec/biomechanics-index.en.json"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+  <!-- Header -->
+  <header class="border-b border-slate-800/80 bg-slate-950/90 sticky top-0 z-30 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5 min-w-0">
+        <a href="https://picklebase.app/en/" aria-label="PickleBase English Homepage" class="text-lg sm:text-xl font-black tracking-tight text-white hover:text-emerald-400 transition">
+          Pickle<span class="text-emerald-400">Base</span> <span class="text-xs font-mono text-slate-400 font-normal">Open Spec v2026.3</span>
+        </a>
+      </div>
+      <nav aria-label="Language switcher and primary navigation" class="flex items-center gap-2 text-xs font-bold">
+        <a href="https://aizaloapp.github.io/picklebase-open-spec/en/" aria-label="English Documentation" class="px-2.5 py-1 rounded-lg bg-emerald-500 text-slate-950">🇺🇸 English (/en/)</a>
+        <a href="https://aizaloapp.github.io/picklebase-open-spec/" aria-label="Chuyển sang Tài liệu Tiếng Việt" class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:text-white transition">🇻🇳 Tiếng Việt (/)</a>
+        <a href="https://picklebase.app/en/" aria-label="Open PickleBase 3D Tactical Board" class="px-3 py-1 rounded-lg bg-sky-500/20 border border-sky-400/40 text-sky-300 hover:bg-sky-500/30 transition">🏟️ Launch 3D Lab ➔</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+    <!-- Hero & GEO Entity Definition -->
+    <section class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900/95 to-emerald-950/30 border border-slate-800 shadow-2xl space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-black uppercase tracking-wider">
+        <span>⚡ Open Biomechanics &amp; Tactical Specification</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+        PickleBase Open Biomechanics &amp; 3D Tactical Specification (USA Pickleball 2026)
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+        <strong>PickleBase Tactical Academy (<a href="https://picklebase.app/en/" class="text-emerald-400 underline hover:text-emerald-300">picklebase.app/en/</a>)</strong> is an interactive sports-science platform providing a free 3D Pickleball Tactical Board, an encyclopedia of <strong>18 core shot biomechanics</strong>, <strong>11 PPA Tour &amp; MLP doubles tactical formations</strong>, a 60 FPS 2.5D Reflex Rally Simulator, and a DUPR Tactical IQ diagnostic engine. All biomechanical parameters below are verified by <strong>Head Coach Nguyen Van Khoa (DUPR 5.5)</strong> under official USA Pickleball 2026 court constants (<code class="text-emerald-300">6.10m × 13.41m</code> court, <code class="text-emerald-300">2.13m / 7ft</code> Kitchen NVZ, <code class="text-emerald-300">86.4cm / 34in</code> center net cord).
+      </p>
+      <div class="flex flex-wrap gap-2.5 pt-2 text-xs font-bold">
+        <a href="https://picklebase.app/en/" aria-label="Launch PickleBase 3D Tactical Board" class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-lg">🔬 Launch 3D Tactical Board</a>
+        <a href="https://picklebase.app/en/trainer" aria-label="Play 2.5D Tactical Rally Simulator" class="px-4 py-2.5 rounded-xl bg-slate-950 border border-emerald-500/40 text-emerald-300 hover:text-white transition">🎮 2.5D Rally Simulator</a>
+        <a href="https://picklebase.app/en/dupr-quiz" aria-label="Take the DUPR Tactical IQ Quiz" class="px-4 py-2.5 rounded-xl bg-slate-950 border border-lime-500/40 text-lime-300 hover:text-white transition">🎯 DUPR Tactical IQ Quiz</a>
+        <a href="https://github.com/aizaloapp/picklebase-open-spec" aria-label="Open GitHub Specification Repository" class="px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-slate-300 hover:text-white transition">📦 GitHub Repository</a>
+      </div>
+    </section>
+
+    <!-- Section 1: 18 Core Shots Biomechanics Table -->
+    <section class="space-y-4">
+      <div class="space-y-1">
+        <h2 class="text-xl sm:text-2xl font-black text-white">🏸 1. Complete 18 Core Shots Biomechanics Matrix</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Select any shot below to open its interactive 3D Paddle Angle &amp; Ball Clock Lab (<code class="text-emerald-300">&lt;paddle-3d-lab&gt;</code>) and 3 Pro Coach video breakdowns:</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/90 text-[11px] uppercase tracking-wider text-slate-400 font-black">
+              <th class="py-3 px-3">#</th>
+              <th class="py-3 px-3">Shot Guide (Clean URL)</th>
+              <th class="py-3 px-3">3D Paddle Angle &amp; Swing Path</th>
+              <th class="py-3 px-3">Contact Point</th>
+              <th class="py-3 px-3">Grip Tension &amp; COR</th>
+              <th class="py-3 px-3">DUPR</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">1</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-dink" aria-label="Open 3D biomechanics guide for Cross-Court Dink (4 Variants)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Cross-Court Dink (4 Variants)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Kitchen Control (NVZ) • Kitchen Line (NVZ 7ft)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Lift +20° (4h00) • Push +10° (3h20) • Slice +26° (3h45➔5h) • Topspin +4° (3h15➔2h45)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+30–34cm ahead of toes • 45–65cm height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">3.0–4.5/10 (Soft Hands • COR 0.48)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">2.0–5.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">2</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-third-drop" aria-label="Open 3D biomechanics guide for Third Shot Drop" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Third Shot Drop
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Transition (Baseline ➔ NVZ) • Baseline (Backcourt 22ft)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Open +6° to +12° (Pro +8° • 3h30➔2h45) • +38° shoulder lift</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+36cm ahead of lead foot • 55–70cm height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">4.0/10 (85% Shoulder • 15% Wrist • COR 0.49)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">3</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-drive" aria-label="Open 3D biomechanics guide for Third Shot Drive" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Third Shot Drive
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Baseline Power Drive • Baseline &amp; Midcourt (16–22ft)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Near-vertical 0° to +4° (Pro +2° • 3h15➔2h30) • +30° brush to shoulder</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+42cm ahead of lead foot • 85cm hip peak</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">6.0/10 (85% Shoulder • 15% Wrist • COR 0.53)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">4</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-drip" aria-label="Open 3D biomechanics guide for The Drip Hybrid Shot" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  The Drip Hybrid Shot
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Hybrid Drive-Drop Attack • Baseline &amp; Transition Zone</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">0° to +5° face (Pro +3° • 3h30➔2h30) • +50° brush to shoulder</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+28cm ahead of lead foot • 45–55cm low height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">5.0/10 (85% Shoulder • 15% Wrist • COR 0.50)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">5</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-reset" aria-label="Open 3D biomechanics guide for Defensive Reset" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Defensive Reset
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Transition Reset Defense • Transition Zone (No Man's Land)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Static +12° to +20° (Pro +16° • 3h30➔3h45) • +5° quiet block</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+28cm in front • 50–75cm core height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">3.0/10 (Sponge hands • COR 0.45)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">6</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-roll-volley" aria-label="Open 3D biomechanics guide for Roll Volley" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Roll Volley
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Kitchen Topspin Volley • Kitchen Line (NVZ 7ft)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Slightly Open +4° (0°➔+6° at 3h15) • Vertical back-brush 3h15➔2h45 pulling up to shoulder (+42°)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+42cm ahead of toes • 60–78cm below net</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">5.0/10 (85% Shoulder • 15% Wrist • COR 0.51)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">7</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-flick" aria-label="Open 3D biomechanics guide for Backhand &amp; Forehand Wrist Flick" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Backhand &amp; Forehand Wrist Flick
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Disguised Wrist Attack • Kitchen Line (At/Above Net Height)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Closed -8° (82° • Pro -10°➔-5°) • +18° frisbee snap (2h45➔1h40)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+45cm out in front • 86–95cm net height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">Loose 3.5/10 coil ➔ 8.0/10 snap (&lt;15cm • COR 0.56)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">8</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-punch-volley" aria-label="Open 3D biomechanics guide for Punch Volley" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Punch Volley
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Counter-Speedup Firefight • Kitchen Firefight (6–9ft)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Slightly closed -6° to -2° (Pro -4° • 2h50) • Flat 0° punch (15cm)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+40cm in front • 95–115cm chest height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">7.0/10 (Firm punch • COR 0.57)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">9</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-scorpion" aria-label="Open 3D biomechanics guide for Scorpion Shot" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Scorpion Shot
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Squat Overhead Counter • Kitchen Line (Deep squat)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Closed -14° to -6° (Pro -10° • 2h40➔2h15) • -5° downward press</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+34cm in front of forehead • 140–170cm height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">6.5/10 (Firm overhead snap • COR 0.56)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">10</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-tomahawk" aria-label="Open 3D biomechanics guide for The Tomahawk Shot" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  The Tomahawk Shot
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Inverted Overhead Putaway • Kitchen Line &amp; Mid-court (High Backhand Floaters)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Closed -12° to -20° (2h28) • -24° axe strike</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+34cm in front of forehead • 175–205cm height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">7.5/10 (Continental grip • COR 0.57)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">11</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-smash" aria-label="Open 3D biomechanics guide for Overhead Smash" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Overhead Smash
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Overhead Smash Putaway • NVZ &amp; Midcourt (High floaters)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Closed -15° to -25° (Pro -20° • 2h20➔1h50) • -25° downward strike</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+32cm in front of forehead • 215–245cm peak reach</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">8.0/10 (Explosive pronation snap • COR 0.58)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">12</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-lob" aria-label="Open 3D biomechanics guide for Disguised Topspin Offensive Lob" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Disguised Topspin Offensive Lob
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Disguised Topspin Lob • Kitchen or Transition Zone</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Open +8° to +15° (Pro +10° • 3h30➔2h45) • +68° vertical lift to shoulder</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+35cm ahead of lead foot • 50–65cm height</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">4.5/10 (85% Shoulder &amp; Legs • 15% Wrist • COR 0.51)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">13</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-serve" aria-label="Open 3D biomechanics guide for Aggressive Deep Serve" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Aggressive Deep Serve
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Point Initiation (Rule 4.A) • Behind Baseline (Court border)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Slightly open 0° to +5° (Pro +3° • 3h15➔2h30) • +35° brush to shoulder (Rule 4.A.4)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+40cm ahead of lead foot • 60–72cm below navel</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">6.0/10 (85% Shoulder • 15% Wrist • COR 0.52)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">2.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">14</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-return" aria-label="Open 3D biomechanics guide for Deep Return of Serve" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Deep Return of Serve
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Deep Return &amp; Net Advance • Behind Baseline (Receiver)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Slightly open 0° to +6° (Pro +3° • 3h15➔2h30) • +28° brush to shoulder</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+36cm ahead • 75–90cm height stepping forward</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">5.5/10 (85% Shoulder • 15% Wrist • COR 0.51)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">2.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">15</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-combo-drive-drop" aria-label="Open 3D biomechanics guide for Combo Drive-Drop Playbook" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Combo Drive-Drop Playbook
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">2-Phase Transition Combo • Baseline (Shot 3) ➔ Midcourt (Shot 5)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Shot 3 Drive (+2°) ➔ Open +8° to +14° (Pro +10° • 3h30➔2h50) on Shot 5</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+35cm out front • After midcourt Split-Step</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">Dynamic: 6.0/10 (Shot 3 Drive) ➔ 4.0/10 (Shot 5 Drop)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">16</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-erne" aria-label="Open 3D biomechanics guide for Erne Shot" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Erne Shot
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Airborne NVZ Bypass (Rule 9.B) • Kitchen Sideline Corner</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Closed -20° to -10° (Pro -15° • 2h30➔2h00) • -20° downward punch</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+38cm early reach • 95–125cm near net post</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">7.0/10 (Decisive kill snap • COR 0.55)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">17</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-bert" aria-label="Open 3D biomechanics guide for Bert Shot" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Bert Shot
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Partner-Crossing Erne Poach • Partner's Sideline Crossing</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Closed -22° to -12° (Pro -18° • 2h25➔1h55) • -22° downward strike</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+40cm airborne reach • 105–135cm apex</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">7.5/10 (Maximum acceleration • COR 0.57)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">5.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">18</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/en/shot-atp" aria-label="Open 3D biomechanics guide for Around The Post (ATP)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Around The Post (ATP)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Around The Post (&lt;34in) • Outside Net Post Boundary</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Near-vertical 0° to +5° (Pro +2° • 3h15➔2h45) • +18° side-topspin</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">+32cm ahead • 25–42cm ankle height outside post</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">6.0/10 (85% Shoulder • 15% Wrist • COR 0.52)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.5+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: 11 Doubles Tactics -->
+    <section class="space-y-4">
+      <div class="space-y-1">
+        <h2 class="text-xl sm:text-2xl font-black text-white">♟️ 2. Pro Doubles Tactical Formations (11 Playbooks)</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Court geometry, target isolation, and transition protocols used on the PPA Tour and Major League Pickleball:</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #1</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 3.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-stacking" aria-label="Read pro doubles tactic Stacking &amp; Switching Doubles Strategy" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Stacking &amp; Switching Doubles Strategy
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Line up on the same side during serve/return and switch laterally to lock the middle with forehands.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Keeps both dominant forehands sealing 90% of the middle seam</span>
+              <a href="https://picklebase.app/en/tactic-stacking" aria-label="Open 3D simulation for Stacking &amp; Switching Doubles Strategy" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #2</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-shake-and-bake" aria-label="Read pro doubles tactic Shake &amp; Bake (3rd Shot Drive &amp; 5th Shot Crash)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Shake &amp; Bake (3rd Shot Drive &amp; 5th Shot Crash)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Aggressive two-player baseline-to-net blitz forcing a weak pop-up return on the 5th ball.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Partner 1 fires dipping 3rd drive while Partner 2 crashes NVZ for 5th ball putaway</span>
+              <a href="https://picklebase.app/en/tactic-shake-and-bake" aria-label="Open 3D simulation for Shake &amp; Bake (3rd Shot Drive &amp; 5th Shot Crash)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #3</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 3.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-transition-zones" aria-label="Read pro doubles tactic T1 &amp; T2 Transition Zones Mastery" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  T1 &amp; T2 Transition Zones Mastery
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">6-step midcourt quantization combining the 2-Step Shovel Push Protocol and shoulder-high out-ball discipline.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Low-paddle short-hop at T1 ➔ Sprint past Dead Zone ➔ High-paddle counter at T2</span>
+              <a href="https://picklebase.app/en/tactic-transition-zones" aria-label="Open 3D simulation for T1 &amp; T2 Transition Zones Mastery" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #4</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-the-freezer" aria-label="Read pro doubles tactic The Freezer (Target Isolation Strategy)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  The Freezer (Target Isolation Strategy)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Psychologically and geometrically ice out the stronger opponent by isolating the weaker partner.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Direct 85–90% of balls to weaker player outer sideline, starving the poacher</span>
+              <a href="https://picklebase.app/en/tactic-the-freezer" aria-label="Open 3D simulation for The Freezer (Target Isolation Strategy)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #5</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 3.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-anti-smash" aria-label="Read pro doubles tactic Anti-Smash Defensive Split-Step Wall" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Anti-Smash Defensive Split-Step Wall
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Absorb 70% of incoming overhead smash kinetic energy and reset the ball softly back into the Kitchen.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Retreat 2 steps ➔ Land split-step 0.1s early ➔ 2.5/10 grip (COR 0.45)</span>
+              <a href="https://picklebase.app/en/tactic-anti-smash" aria-label="Open 3D simulation for Anti-Smash Defensive Split-Step Wall" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #6</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-speedup-combos" aria-label="Read pro doubles tactic Smart Speed-Up Combos &amp; Counter Anticipation" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Smart Speed-Up Combos &amp; Counter Anticipation
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Two-shot offensive patterns exploiting anatomical rebound angles at the Non-Volley Zone.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Initiate 1st speed-up jam ➔ Pre-aim for 85% predictable 2nd-ball rebound</span>
+              <a href="https://picklebase.app/en/tactic-speedup-combos" aria-label="Open 3D simulation for Smart Speed-Up Combos &amp; Counter Anticipation" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #7</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-chicken-wing" aria-label="Read pro doubles tactic Chicken Wing Body-Jam Attack" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Chicken Wing Body-Jam Attack
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Mechanically lock the opponent paddle elbow in close-quarters 14ft kitchen exchanges.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Target paddle-side armpit and hip (6in from torso) to jam elbow rotation</span>
+              <a href="https://picklebase.app/en/tactic-chicken-wing" aria-label="Open 3D simulation for Chicken Wing Body-Jam Attack" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #8</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-banana-roll" aria-label="Read pro doubles tactic Off-The-Bounce Banana Roll Curve" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Off-The-Bounce Banana Roll Curve
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Curve aggressive topspin around the outer edge of a bouncing kitchen ball into opponent feet.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Drop knees to net level ➔ Crescent brush 7-to-1 o-clock dipping at shoelaces</span>
+              <a href="https://picklebase.app/en/tactic-banana-roll" aria-label="Open 3D simulation for Off-The-Bounce Banana Roll Curve" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #9</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-push-dink" aria-label="Read pro doubles tactic Aggressive Hip Push Dink" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Aggressive Hip Push Dink
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Disrupt passive dinking rhythms by driving linear pace deep into the opponent backhand hip.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Intercept bounce apex ➔ Linear +10° shoulder push deep into 1ft indecision zone</span>
+              <a href="https://picklebase.app/en/tactic-push-dink" aria-label="Open 3D simulation for Aggressive Hip Push Dink" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #10</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 3.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-deep-return" aria-label="Read pro doubles tactic Deep Slice Return &amp; Net Sprint" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Deep Slice Return &amp; Net Sprint
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Float a deep penetrating slice return to buy full transition time to establish Kitchen dominance.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Open +10°➔+18° slice buying 1.8–2.0s hangtime to complete 4-stride net rush</span>
+              <a href="https://picklebase.app/en/tactic-deep-return" aria-label="Open 3D simulation for Deep Slice Return &amp; Net Sprint" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Tactic #11</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0➔4.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/en/tactic-breaking-4-0" aria-label="Read pro doubles tactic Breaking the 4.0 Barrier to 4.5+ (3-5-7-9 &amp; Disguise)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Breaking the 4.0 Barrier to 4.5+ (3-5-7-9 &amp; Disguise)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">5 tournament pillars eliminating rushed 4.0 habits to achieve consistent 4.5+ match dominance.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ 3-5-7-9 progression + 18–24in safety margin + NVZ disguise + Backhand counter</span>
+              <a href="https://picklebase.app/en/tactic-breaking-4-0" aria-label="Open 3D simulation for Breaking the 4.0 Barrier to 4.5+ (3-5-7-9 &amp; Disguise)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Open 3D ➔</a>
+            </div>
+          </article>
+      </div>
+    </section>
+
+    <!-- Section 3: 5 Interactive Training Tools -->
+    <section class="space-y-4">
+      <div class="space-y-1">
+        <h2 class="text-xl sm:text-2xl font-black text-white">🚀 3. Interactive Online Training &amp; Diagnostic Tools (5 WebApps)</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Practice court positioning, reflex defense, and tactical decision-making with PickleBase interactive tools:</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/en/trainer" aria-label="Launch interactive tool 2.5D Tactical Reflex Rally Simulator" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  2.5D Tactical Reflex Rally Simulator
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">60 FPS Isometric simulator featuring 4 modes + 8 specialized drills (Kitchen 2.0 Traffic Light, T1-T2 Transition, Threat Arcs &amp; Swing Cam).</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/en/trainer" aria-label="Launch 2.5D Tactical Reflex Rally Simulator" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Launch Tool ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/en/dupr-quiz" aria-label="Launch interactive tool DUPR Tactical IQ Diagnostic Quiz" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  DUPR Tactical IQ Diagnostic Quiz
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">20 pro match scenarios measuring a 5-axis tactical radar, diagnosing positional flaws, and generating personalized training roadmaps.</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/en/dupr-quiz" aria-label="Launch DUPR Tactical IQ Diagnostic Quiz" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Launch Tool ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/en/glossary" aria-label="Launch interactive tool 35+ Pro Pickleball Biomechanics &amp; Rules Glossary" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  35+ Pro Pickleball Biomechanics &amp; Rules Glossary
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Standardized biomechanical definitions and official USA Pickleball 2026 Rulebook citations across 35+ competitive terms.</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/en/glossary" aria-label="Launch 35+ Pro Pickleball Biomechanics &amp; Rules Glossary" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Launch Tool ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/en/matches" aria-label="Launch interactive tool Curated PPA &amp; MLP Pro Match Video Breakdown" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  Curated PPA &amp; MLP Pro Match Video Breakdown
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Point-by-point tactical breakdowns of world-class PPA and MLP Tour matches with interactive timestamp bookmarks.</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/en/matches" aria-label="Launch Curated PPA &amp; MLP Pro Match Video Breakdown" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Launch Tool ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/en/extension" aria-label="Launch interactive tool PickleBase Chrome AI Coach Extension (Manifest V3)" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  PickleBase Chrome AI Coach Extension (Manifest V3)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Official Chrome Web Store Side Panel AI Coach (DUPR 5.5) for real-time YouTube match and technique analysis.</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/en/extension" aria-label="Launch PickleBase Chrome AI Coach Extension (Manifest V3)" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Launch Tool ➔</a>
+            </div>
+          </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Machine-Readable Specs & Entity Verification -->
+    <section class="p-5 sm:p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3 text-xs sm:text-sm">
+      <h2 class="text-base sm:text-lg font-black text-emerald-400">🤖 4. Machine-Readable Datasets, OpenAPI 3.1 &amp; MCP Server</h2>
+      <p class="text-slate-300 leading-relaxed">
+        Designed for RAG pipelines, AI Answer Engines (Google AI Overviews, Perplexity, ChatGPT Search, Claude), and autonomous agents connecting via Model Context Protocol:
+      </p>
+      <div class="flex flex-wrap gap-3 font-mono text-xs pt-1">
+        <a href="https://picklebase.app/llms.txt" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-emerald-300 hover:border-emerald-400 transition">llms.txt</a>
+        <a href="https://picklebase.app/llms-full.txt" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-emerald-300 hover:border-emerald-400 transition">llms-full.txt</a>
+        <a href="https://picklebase.app/openapi.json" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-sky-300 hover:border-sky-400 transition">openapi.json</a>
+        <a href="https://picklebase.app/shots.md" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 hover:border-slate-500 transition">shots.md</a>
+        <a href="https://picklebase.app/tactics.md" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 hover:border-slate-500 transition">tactics.md</a>
+        <a href="https://picklebase.app/glossary.md" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 hover:border-slate-500 transition">glossary.md</a>
+        <a href="https://www.wikidata.org/wiki/Q141814048" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-teal-500/40 text-teal-300 hover:border-teal-400 transition">Wikidata (Q141814048)</a>
+        <a href="https://doi.org/10.5281/zenodo.23582848" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-amber-500/40 text-amber-300 hover:border-amber-400 transition">CERN Zenodo DOI (10.5281/zenodo.23582848)</a>
+        <a href="https://huggingface.co/datasets/lekhoa288/picklebase-open-biomechanics" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-yellow-500/40 text-yellow-300 hover:border-yellow-400 transition">Hugging Face Dataset</a>
+        <a href="https://www.npmjs.com/package/picklebase-mcp" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-indigo-500/40 text-indigo-300 hover:border-indigo-400 transition">npm MCP SDK (v2.3.0)</a>
+        <a href="https://pypi.org/project/picklebase-mcp/" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-sky-500/40 text-sky-300 hover:border-sky-400 transition">PyPI MCP SDK</a>
+        <a href="https://clawhub.ai/aizaloapp/skills/picklebase-biomechanics-coach" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/40 text-emerald-300 hover:border-emerald-400 transition">ClawHub AI Coach Skill</a>
+        <a href="https://chromewebstore.google.com/detail/picklebase/fodnbhemeinhfbeomholngiakpbkicjg" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-purple-500/40 text-purple-300 hover:border-purple-400 transition">Chrome Web Store Extension</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800/80 py-6 mt-12 text-center text-xs text-slate-400 space-y-2">
+    <p>© 2026 <strong class="text-white">PickleBase Tactical Academy</strong> (<a href="https://picklebase.app/en/" class="text-emerald-400 hover:underline">picklebase.app/en/</a>) • Verified by Head Coach Nguyen Van Khoa (DUPR 5.5).</p>
+    <p>Languages: <a href="https://aizaloapp.github.io/picklebase-open-spec/en/" class="text-emerald-400 underline">English (EN)</a> | <a href="https://aizaloapp.github.io/picklebase-open-spec/" class="text-sky-400 underline">Tiếng Việt (VI)</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Agent Security Rules — Environment & Credentials Exclusion
+.env*
+.dev.vars*
+*.pem
+*.key
+google-indexing-key.json
+node_modules/
+.DS_Store
+Thumbs.db

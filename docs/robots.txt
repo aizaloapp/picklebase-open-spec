@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aizaloapp.github.io/picklebase-open-spec/sitemap.xml

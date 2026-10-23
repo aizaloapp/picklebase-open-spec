@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiêu Chuẩn Cơ Sinh Học & Chiến Thuật PickleBase 3D (2026)</title>
+  <meta name="description" content="Cổng dữ liệu mở chuẩn hóa cơ sinh học 18 cú đánh, 11 chiến thuật đánh đôi và công cụ mô phỏng Pickleball 3D của Học viện Chiến thuật PickleBase.">
+  <link rel="canonical" href="https://aizaloapp.github.io/picklebase-open-spec/">
+
+  <!-- Hreflang 3 chiều chuẩn SEO Quốc Tế -->
+  <link rel="alternate" hreflang="vi" href="https://aizaloapp.github.io/picklebase-open-spec/">
+  <link rel="alternate" hreflang="en" href="https://aizaloapp.github.io/picklebase-open-spec/en/">
+  <link rel="alternate" hreflang="x-default" href="https://aizaloapp.github.io/picklebase-open-spec/">
+
+  <!-- Open Graph (4x4 Guardrail) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tiêu Chuẩn Cơ Sinh Học & Chiến Thuật PickleBase 3D (2026)">
+  <meta property="og:description" content="Cổng dữ liệu mở chuẩn hóa cơ sinh học 18 cú đánh, 11 chiến thuật đánh đôi và công cụ mô phỏng Pickleball 3D của Học viện Chiến thuật PickleBase.">
+  <meta property="og:url" content="https://aizaloapp.github.io/picklebase-open-spec/">
+  <meta property="og:image" content="https://picklebase.app/og-image.jpg">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Twitter Card (4x4 Guardrail) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tiêu Chuẩn Cơ Sinh Học & Chiến Thuật PickleBase 3D (2026)">
+  <meta name="twitter:description" content="Cổng dữ liệu mở chuẩn hóa cơ sinh học 18 cú đánh, 11 chiến thuật đánh đôi và công cụ mô phỏng Pickleball 3D của Học viện Chiến thuật PickleBase.">
+  <meta name="twitter:image" content="https://picklebase.app/og-image.jpg">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    html, body { max-width: 100vw; overflow-x: hidden; overflow-x: clip; background-color: #0B0F19; color: #f8fafc; }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://aizaloapp.github.io/picklebase-open-spec/#webpage",
+      "url": "https://aizaloapp.github.io/picklebase-open-spec/",
+      "name": "Tiêu Chuẩn Cơ Sinh Học & Chiến Thuật PickleBase 3D (2026)",
+      "description": "Cổng dữ liệu mở chuẩn hóa cơ sinh học 18 cú đánh, 11 chiến thuật đánh đôi và công cụ mô phỏng Pickleball 3D của Học viện Chiến thuật PickleBase.",
+      "inLanguage": "vi",
+      "isPartOf": {
+        "@id": "https://picklebase.app/#website"
+      },
+      "about": {
+        "@id": "https://picklebase.app/#organization"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://aizaloapp.github.io/picklebase-open-spec/#dataset",
+      "name": "PickleBase Open Pickleball Biomechanics & 3D Tactical Specification Dataset (VI)",
+      "description": "Cổng dữ liệu mở chuẩn hóa cơ sinh học 18 cú đánh, 11 chiến thuật đánh đôi và công cụ mô phỏng Pickleball 3D của Học viện Chiến thuật PickleBase.",
+      "url": "https://aizaloapp.github.io/picklebase-open-spec/",
+      "inLanguage": "vi",
+      "license": "https://opensource.org/licenses/MIT",
+      "creator": {
+        "@type": "SportsOrganization",
+        "@id": "https://picklebase.app/#organization",
+        "name": "PickleBase Tactical Academy",
+        "url": "https://picklebase.app/",
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q141814048",
+          "https://doi.org/10.5281/zenodo.23582848",
+          "https://zenodo.org/records/23582848",
+          "https://huggingface.co/datasets/lekhoa288/picklebase-open-biomechanics",
+          "https://github.com/aizaloapp/picklebase-open-spec",
+          "https://aizaloapp.github.io/picklebase-open-spec/",
+          "https://aizaloapp.github.io/picklebase-open-spec/en/",
+          "https://www.npmjs.com/package/picklebase-mcp",
+          "https://pypi.org/project/picklebase-mcp/",
+          "https://clawhub.ai/aizaloapp/skills/picklebase-biomechanics-coach",
+          "https://chromewebstore.google.com/detail/picklebase/fodnbhemeinhfbeomholngiakpbkicjg"
+        ]
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://aizaloapp.github.io/picklebase-open-spec/biomechanics-index.vi.json"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+  <!-- Header -->
+  <header class="border-b border-slate-800/80 bg-slate-950/90 sticky top-0 z-30 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5 min-w-0">
+        <a href="https://picklebase.app/" aria-label="Trang chủ PickleBase" class="text-lg sm:text-xl font-black tracking-tight text-white hover:text-emerald-400 transition">
+          Pickle<span class="text-emerald-400">Base</span> <span class="text-xs font-mono text-slate-400 font-normal">Open Spec v2026.3</span>
+        </a>
+      </div>
+      <nav aria-label="Chuyển đổi ngôn ngữ và liên kết chính" class="flex items-center gap-2 text-xs font-bold">
+        <a href="https://aizaloapp.github.io/picklebase-open-spec/" aria-label="Bản Tiếng Việt" class="px-2.5 py-1 rounded-lg bg-emerald-500 text-slate-950">🇻🇳 Tiếng Việt</a>
+        <a href="https://aizaloapp.github.io/picklebase-open-spec/en/" aria-label="Switch to English Documentation" class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 hover:text-white transition">🇺🇸 English (/en/)</a>
+        <a href="https://picklebase.app/" aria-label="Mở Sa Bàn Chiến Thuật 3D PickleBase" class="px-3 py-1 rounded-lg bg-sky-500/20 border border-sky-400/40 text-sky-300 hover:bg-sky-500/30 transition">🏟️ Mở Sa Bàn 3D ➔</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+    <!-- Hero & GEO Entity Definition -->
+    <section class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900/95 to-emerald-950/30 border border-slate-800 shadow-2xl space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-black uppercase tracking-wider">
+        <span>⚡ Open Biomechanics &amp; Tactical Specification</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+        Tiêu Chuẩn Mở Cơ Sinh Học &amp; Sơ Đồ Chiến Thuật PickleBase 3D (USA Pickleball 2026)
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+        <strong>Học viện Chiến thuật PickleBase (<a href="https://picklebase.app/" class="text-emerald-400 underline hover:text-emerald-300">picklebase.app</a>)</strong> là nền tảng công nghệ thể thao trực tuyến cung cấp miễn phí Sa bàn Chiến thuật Pickleball 3D, từ điển giải phẫu cơ sinh học <strong>18 cú đánh kỹ thuật cốt lõi</strong>, <strong>11 kịch bản chiến thuật đánh đôi chuẩn PPA Tour &amp; MLP</strong>, Đấu trường Phản xạ 2.5D và hệ thống chẩn đoán trình độ DUPR. Toàn bộ thông số dưới đây được kiểm định bởi <strong>HLV Trưởng Nguyễn Văn Khoa (DUPR 5.5)</strong> dựa trên kích thước sân tiêu chuẩn (<code class="text-emerald-300">6.10m × 13.41m</code>, vùng cấm vô-lê Kitchen NVZ <code class="text-emerald-300">2.13m / 7ft</code>, chiều cao tâm lưới <code class="text-emerald-300">86.4cm / 34in</code>).
+      </p>
+      <div class="flex flex-wrap gap-2.5 pt-2 text-xs font-bold">
+        <a href="https://picklebase.app/" aria-label="Truy cập Sa Bàn Chiến Thuật 3D PickleBase" class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-lg">🔬 Khởi Chạy Sa Bàn 3D (picklebase.app)</a>
+        <a href="https://picklebase.app/trainer" aria-label="Chơi Đấu Trường Phản Xạ 2.5D" class="px-4 py-2.5 rounded-xl bg-slate-950 border border-emerald-500/40 text-emerald-300 hover:text-white transition">🎮 Đấu Trường Phản Xạ 2.5D</a>
+        <a href="https://picklebase.app/dupr-quiz" aria-label="Làm bài trắc nghiệm trình độ DUPR" class="px-4 py-2.5 rounded-xl bg-slate-950 border border-lime-500/40 text-lime-300 hover:text-white transition">🎯 Test Trình Độ DUPR</a>
+        <a href="https://github.com/aizaloapp/picklebase-open-spec" aria-label="Mã nguồn tiêu chuẩn mở trên GitHub" class="px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-slate-300 hover:text-white transition">📦 GitHub Repository</a>
+      </div>
+    </section>
+
+    <!-- Section 1: 18 Core Shots Biomechanics Table -->
+    <section class="space-y-4">
+      <div class="space-y-1">
+        <h2 class="text-xl sm:text-2xl font-black text-white">🏸 1. Bảng Thông Số Cơ Sinh Học 18 Cú Đánh Cốt Lõi (Core Shot Biomechanics)</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Bấm vào từng cú đánh để mở mô phỏng góc mặt vợt 3D (<code class="text-emerald-300">&lt;paddle-3d-lab&gt;</code>) và 3 góc nhìn HLV Pro có phụ đề AI song ngữ:</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/90 text-[11px] uppercase tracking-wider text-slate-400 font-black">
+              <th class="py-3 px-3">#</th>
+              <th class="py-3 px-3">Chuyên Đề Kỹ Thuật (Clean URL)</th>
+              <th class="py-3 px-3">Góc Mặt Vợt 3D &amp; Quỹ Đạo</th>
+              <th class="py-3 px-3">Điểm Tiếp Xúc Chuẩn</th>
+              <th class="py-3 px-3">Lực Cầm Vợt &amp; COR</th>
+              <th class="py-3 px-3">DUPR</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">1</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-dink" aria-label="Xem giải phẫu cơ sinh học 3D cho Dink Chéo Sân (4 Biến Thể)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Dink Chéo Sân (4 Biến Thể)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Kiểm Soát Bếp (NVZ) • Vạch Kitchen (NVZ 2.13m)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Lift +20° (4h00) • Push +10° (3h20) • Slice +26° (3h45➔5h) • Topspin +4° (3h15➔2h45)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +30–34cm • Độ cao 45–65cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">3.0–4.5/10 (Soft Hands • COR 0.48)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">2.0–5.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">2</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-third-drop" aria-label="Xem giải phẫu cơ sinh học 3D cho Thả Bóng Quả Thứ 3" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Thả Bóng Quả Thứ 3
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Chuyển Tiếp (Baseline ➔ NVZ) • Baseline (Đáy sân 6.7m)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Mở nhẹ +6° đến +12° (Chuẩn +8° • 3h30➔2h45) • Nâng vai +38°</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +36cm • Độ cao 55–70cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">4.0/10 (85% Vai • 15% Cổ tay • COR 0.49)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">3</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-drive" aria-label="Xem giải phẫu cơ sinh học 3D cho Tấn Công Tốc Độ (Drive)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Tấn Công Tốc Độ (Drive)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Tấn Công Đáy Sân • Baseline &amp; Sân sau (5–6.7m)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Đứng/mở nhẹ 0° đến +4° (Chuẩn +2° • 3h15➔2h30) • Miết +30° kéo lên vai</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +42cm • Đỉnh nảy ngang hông 85cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">6.0/10 (85% Vai • 15% Cổ tay • COR 0.53)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">4</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-drip" aria-label="Xem giải phẫu cơ sinh học 3D cho Cú Drip (Hybrid Drive-Drop)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Cú Drip (Hybrid Drive-Drop)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Tấn Công Lai (Drive-Drop) • Baseline &amp; Transition (4.5–6.7m)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Đứng/mở nhẹ 0° đến +5° (Chuẩn +3° • 3h30➔2h30) • Miết +50° kéo lên vai</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +28cm • Bóng thấp 45–55cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">5.0/10 (85% Vai • 15% Cổ tay • COR 0.50)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">5</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-reset" aria-label="Xem giải phẫu cơ sinh học 3D cho Hãm Xung Lực (Reset Shot)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Hãm Xung Lực (Reset Shot)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Phòng Thủ Hãm Lực • Transition Zone (Vùng tử địa 3–5m)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Mở tĩnh +12° đến +20° (Chuẩn +16° • 3h30➔3h45) • Đỡ tĩnh +5°</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +28cm • Độ cao 50–75cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">3.0/10 (Bàn tay bọt biển • COR 0.45)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">6</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-roll-volley" aria-label="Xem giải phẫu cơ sinh học 3D cho Vô-lê Xoáy Cuộn (Roll Volley)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Vô-lê Xoáy Cuộn (Roll Volley)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Tấn Công Vạch Bếp • Vạch Kitchen (NVZ 2.13m)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Mở nhẹ +4° (0°➔+6° tại 3h15) • Miết dọc lưng bóng 3h15➔2h45 kéo lên vai (+42°)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +42cm • Dưới lưới 60–78cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">5.0/10 (85% Vai • 15% Cổ tay • COR 0.51)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">7</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-flick" aria-label="Xem giải phẫu cơ sinh học 3D cho Tuyệt Kỹ Flick Cổ Tay (Backhand &amp; Forehand Flick)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Tuyệt Kỹ Flick Cổ Tay (Backhand &amp; Forehand Flick)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Đột Biến Cổ Tay (NVZ) • Sát vạch Kitchen (Đón ngang/trên lưới)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Khép -8° (82° • Chuẩn -10°➔-5°) • Búng đĩa bay +18° (2h45➔1h40)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mặt +45cm • Ngang/trên lưới 86–95cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">Xả lỏng 3.5/10 ➔ Búng 8.0/10 (&lt;15cm • COR 0.56)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">8</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-punch-volley" aria-label="Xem giải phẫu cơ sinh học 3D cho Vô-lê Đấm Cận Chiến (Punch Volley)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Vô-lê Đấm Cận Chiến (Punch Volley)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Đấu Tay Nhanh (Firefight) • Kitchen &amp; Lưới (Cận chiến 2–3m)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Hơi đóng -6° đến -2° (Chuẩn -4° • 2h50) • Đấm phẳng 0° (15cm)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +40cm • Ngang ngực 95–115cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">7.0/10 (Chắc nịch • COR 0.57)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">9</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-scorpion" aria-label="Xem giải phẫu cơ sinh học 3D cho Đòn Bọ Cạp (Scorpion Shot)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Đòn Bọ Cạp (Scorpion Shot)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Phản Công Hạ Tấn • Sát vạch Kitchen (Hạ tấn sâu)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Đóng -14° đến -6° (Chuẩn -10° • 2h40➔2h15) • Đè xuống -5°</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước trán +34cm • Độ cao 140–170cm trên vai</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">6.5/10 (Khóa cổ tay trên cao • COR 0.56)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">10</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-tomahawk" aria-label="Xem giải phẫu cơ sinh học 3D cho Cú Rìu Chiến (The Tomahawk Shot)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Cú Rìu Chiến (The Tomahawk Shot)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Dứt Điểm Trên Cao • Sát vạch Kitchen &amp; Mid-court (Bóng bổng trái tay)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Đóng mặt vợt -12° đến -20° (2h28) • Bổ rìu -24°</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước trán +34cm • Độ cao 175–205cm trên vai trái</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">7.5/10 (Cầm Continental • COR 0.57)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">11</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-smash" aria-label="Xem giải phẫu cơ sinh học 3D cho Đập Bóng Trên Đầu (Overhead Smash)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Đập Bóng Trên Đầu (Overhead Smash)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Dứt Điểm Bóng Bổng • Kitchen &amp; Giữa sân (Bóng bổng)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Đóng úp -15° đến -25° (Chuẩn -20° • 2h20➔1h50) • Bổ xuống -25°</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước trán +32cm • Đỉnh tầm với 215–245cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">8.0/10 (Khóa lực đập kết liễu • COR 0.58)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">12</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-lob" aria-label="Xem giải phẫu cơ sinh học 3D cho Lốp Bóng Chiến Thuật (Topspin Lob)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Lốp Bóng Chiến Thuật (Topspin Lob)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Chuyển Hóa Thế Trận • Kitchen hoặc Vùng chuyển tiếp</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Mở nhẹ +8° đến +15° (Chuẩn +10° • 3h30➔2h45) • Nâng dựng +68° lên vai</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +35cm • Độ cao 50–65cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">4.5/10 (85% Vai &amp; Chân • 15% Cổ tay • COR 0.51)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">3.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">13</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-serve" aria-label="Xem giải phẫu cơ sinh học 3D cho Giao Bóng Tấn Công (Power Serve)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Giao Bóng Tấn Công (Power Serve)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Khởi Đầu Điểm Bóng • Sau vạch Baseline (Ngoài sân)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Mở nhẹ 0° đến +5° (Chuẩn +3° • 3h15➔2h30) • Miết +35° kéo lên vai (Luật 4.A.4)</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +40cm • Dưới rốn 60–72cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">6.0/10 (85% Vai • 15% Cổ tay • COR 0.52)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">2.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">14</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-return" aria-label="Xem giải phẫu cơ sinh học 3D cho Trả Giao Sâu (Deep Return)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Trả Giao Sâu (Deep Return)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Trả Giao Chiếm Lưới • Sau vạch Baseline (Đón bóng)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Mở nhẹ 0° đến +6° (Chuẩn +3° • 3h15➔2h30) • Miết +28° kéo lên vai</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +36cm • Độ cao 75–90cm khi bước tới</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">5.5/10 (85% Vai • 15% Cổ tay • COR 0.51)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">2.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">15</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-combo-drive-drop" aria-label="Xem giải phẫu cơ sinh học 3D cho Combo Tấn Công — Thả Bóng (Drive-Drop)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Combo Tấn Công — Thả Bóng (Drive-Drop)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Tổ Hợp Quả 3 &amp; Quả 5 • Baseline (Quả 3) ➔ Transition (Quả 5)</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Quả 3 Drive (+2°) ➔ Mở +8° đến +14° (Chuẩn +10° • 3h30➔2h50) ở Quả 5</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +35cm • Sau nhịp Split-Step giữa sân</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">Chuyển đổi: 6.0/10 (Quả 3 Drive) ➔ 4.0/10 (Quả 5 Drop)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">16</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-erne" aria-label="Xem giải phẫu cơ sinh học 3D cho Bật Nhảy Biên (Erne Shot)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Bật Nhảy Biên (Erne Shot)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Đột Biến Ngoài Biên (Luật 9.B) • Mép ngoài vạch Kitchen biên dọc</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Đóng -20° đến -10° (Chuẩn -15° • 2h30➔2h00) • Đập xuống -20°</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Vươn sớm +38cm • Độ cao 95–125cm sát cột lưới</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">7.0/10 (Quyết đoán dứt điểm • COR 0.55)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.5+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">17</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-bert" aria-label="Xem giải phẫu cơ sinh học 3D cho Cắt Mặt Nhảy Biên (Bert Shot)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Cắt Mặt Nhảy Biên (Bert Shot)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Bắt Lưới Cắt Mặt Đồng Đội • Cắt ngang phần sân đồng đội</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Đóng -22° đến -12° (Chuẩn -18° • 2h25➔1h55) • Quất xuống -22°</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Vươn +40cm trên không • Độ cao 105–135cm</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">7.5/10 (Tối đa gia tốc • COR 0.57)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">5.0+</td>
+            </tr>
+            <tr class="border-b border-slate-800/80 hover:bg-slate-900/70 transition">
+              <td class="py-3 px-3 font-mono text-xs text-slate-400">18</td>
+              <td class="py-3 px-3">
+                <a href="https://picklebase.app/shot-atp" aria-label="Xem giải phẫu cơ sinh học 3D cho Vòng Quanh Cột Lưới (Around The Post)" class="font-bold text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40 hover:decoration-emerald-300 transition">
+                  Vòng Quanh Cột Lưới (Around The Post)
+                </a>
+                <div class="text-[11px] text-slate-400 mt-0.5">Đánh Vòng Cột Lưới (&lt;86cm) • Ngoài mép sân sau cột lưới</div>
+              </td>
+              <td class="py-3 px-3 font-mono text-xs text-sky-300">Đứng/mở nhẹ 0° đến +5° (Chuẩn +2° • 3h15➔2h45) • Miết +18°</td>
+              <td class="py-3 px-3 font-mono text-xs text-slate-200">Trước mũi chân +32cm • Độ cao 25–42cm ngoài cột lưới</td>
+              <td class="py-3 px-3 font-mono text-xs text-amber-300">6.0/10 (85% Vai • 15% Cổ tay • COR 0.52)</td>
+              <td class="py-3 px-3 font-mono text-xs font-bold text-lime-300">4.5+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: 11 Doubles Tactics -->
+    <section class="space-y-4">
+      <div class="space-y-1">
+        <h2 class="text-xl sm:text-2xl font-black text-white">♟️ 2. Hệ Thống 11 Chiến Thuật Đánh Đôi &amp; Đội Hình Giải Đấu Pro</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Các mô hình kiểm soát không gian sân đấu, cô lập mục tiêu và chuyển tiếp từ Baseline lên chiếm vạch Kitchen:</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #1</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 3.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-stacking" aria-label="Đọc chiến thuật đánh đôi Chiến Thuật Stacking &amp; Hoán Đổi Đội Hình" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Chiến Thuật Stacking &amp; Hoán Đổi Đội Hình
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Xếp cặp cùng một cánh khi giao/trả bóng và bứt tốc hoán đổi vị trí chiếm vạch Kitchen.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Giữ 2 tay thuận (Forehand) bao quát 90% trung lộ</span>
+              <a href="https://picklebase.app/tactic-stacking" aria-label="Mở sơ đồ 3D của Chiến Thuật Stacking &amp; Hoán Đổi Đội Hình" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #2</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-shake-and-bake" aria-label="Đọc chiến thuật đánh đôi Tổ Hợp Shake &amp; Bake (Bắn Tỉa &amp; Đột Kích Quả Thứ 5)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Tổ Hợp Shake &amp; Bake (Bắn Tỉa &amp; Đột Kích Quả Thứ 5)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Phối hợp 2 người đánh đôi tấn công áp đặt ngay từ quả thứ 3 buộc đối thủ đỡ bóng bổng.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Quả 3 Drive cắm gối + Đồng đội cắt lưới đè quả 5 bổng</span>
+              <a href="https://picklebase.app/tactic-shake-and-bake" aria-label="Mở sơ đồ 3D của Tổ Hợp Shake &amp; Bake (Bắn Tỉa &amp; Đột Kích Quả Thứ 5)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #3</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 3.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-transition-zones" aria-label="Đọc chiến thuật đánh đôi Phân Vùng T1 &amp; T2 Thoát Vùng Đất Chết (Transition Zones)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Phân Vùng T1 &amp; T2 Thoát Vùng Đất Chết (Transition Zones)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Lượng hóa lộ trình 6 bước vượt qua Vùng Tử Địa kèm Giao thức Đẩy Xẻng 2 Nhịp và Quy tắc Vàng bỏ bóng ngang rốn.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Đỡ Short-Hop vợt thấp tại T1 ➔ Bứt tốc qua Dead Zone ➔ Vợt cao tại T2</span>
+              <a href="https://picklebase.app/tactic-transition-zones" aria-label="Mở sơ đồ 3D của Phân Vùng T1 &amp; T2 Thoát Vùng Đất Chết (Transition Zones)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #4</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-the-freezer" aria-label="Đọc chiến thuật đánh đôi Chiến Thuật The Freezer (Đóng Băng Tay Vợt Mạnh)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Chiến Thuật The Freezer (Đóng Băng Tay Vợt Mạnh)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Cô lập hoàn toàn tay săn lưới nguy hiểm của đối phương bằng kỷ luật phân phối điểm rơi.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Dồn 85–90% bóng ép sát biên đối thủ yếu, né dải trung lộ 1.2m</span>
+              <a href="https://picklebase.app/tactic-the-freezer" aria-label="Mở sơ đồ 3D của Chiến Thuật The Freezer (Đóng Băng Tay Vợt Mạnh)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #5</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 3.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-anti-smash" aria-label="Đọc chiến thuật đánh đôi Bức Tường Phòng Thủ Anti-Smash (Split-Step Wall)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Bức Tường Phòng Thủ Anti-Smash (Split-Step Wall)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Biến mặt vợt thành đệm hấp thụ 70% động năng cú đập Overhead Smash để thả bóng rụng lại vào Bếp.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Lùi 2 bước ➔ Split-step trước 0.1s ➔ Tay lỏng 2.5/10 (COR 0.45)</span>
+              <a href="https://picklebase.app/tactic-anti-smash" aria-label="Mở sơ đồ 3D của Bức Tường Phòng Thủ Anti-Smash (Split-Step Wall)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #6</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-speedup-combos" aria-label="Đọc chiến thuật đánh đôi 3 Tổ Hợp Speed-Up &amp; Đón Lõng Phản Đòn (Speed-Up Combos)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  3 Tổ Hợp Speed-Up &amp; Đón Lõng Phản Đòn (Speed-Up Combos)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Tấn công theo chuỗi 2 nhịp có tính toán xác suất góc bật bóng thay vì đánh cầu may 1 quả ăn ngay.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Bắn nhử nhịp 1 ➔ Đón lõng 85% quỹ đạo bật lại ở nhịp 2</span>
+              <a href="https://picklebase.app/tactic-speedup-combos" aria-label="Mở sơ đồ 3D của 3 Tổ Hợp Speed-Up &amp; Đón Lõng Phản Đòn (Speed-Up Combos)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #7</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-chicken-wing" aria-label="Đọc chiến thuật đánh đôi Tấn Công Điểm Mù Nách Gà (Chicken Wing Body-Jam)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Tấn Công Điểm Mù Nách Gà (Chicken Wing Body-Jam)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Khóa cứng khớp khuỷu tay đối thủ ở cự ly gần 4.2m khiến họ không thể mở vợt phản công.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Găm bóng vào khớp nách/hông tay cầm vợt (cách sườn 15cm)</span>
+              <a href="https://picklebase.app/tactic-chicken-wing" aria-label="Mở sơ đồ 3D của Tấn Công Điểm Mù Nách Gà (Chicken Wing Body-Jam)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #8</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-banana-roll" aria-label="Đọc chiến thuật đánh đôi Cú Gạt Xoáy Quả Chuối (Off-The-Bounce Banana Roll)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Cú Gạt Xoáy Quả Chuối (Off-The-Bounce Banana Roll)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Tấn công bóng nảy tại Kitchen bằng quỹ đạo xoáy cong bên sườn bóng lượn qua lưới cắm xuống chân.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Hạ gối ngang lưới ➔ Vuốt cong lưỡi liềm 7h ➔ 1h cắm mép giày</span>
+              <a href="https://picklebase.app/tactic-banana-roll" aria-label="Mở sơ đồ 3D của Cú Gạt Xoáy Quả Chuối (Off-The-Bounce Banana Roll)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #9</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-push-dink" aria-label="Đọc chiến thuật đánh đôi Đẩy Dink Ép Hông Trái Tay (Aggressive Push Dink)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Đẩy Dink Ép Hông Trái Tay (Aggressive Push Dink)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Phá vỡ nhịp dink an toàn của đối phương bằng lực đẩy phẳng ép họ phải lùi chân hoặc đỡ Short-Hop.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Đón đỉnh nảy (Apex) ➔ Đẩy piston vai +10° sâu vào vùng lưỡng lự 30cm</span>
+              <a href="https://picklebase.app/tactic-push-dink" aria-label="Mở sơ đồ 3D của Đẩy Dink Ép Hông Trái Tay (Aggressive Push Dink)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #10</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 3.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-deep-return" aria-label="Đọc chiến thuật đánh đôi Trả Giao Bóng Cắt Sâu &amp; Bứt Tốc Chiếm Lưới (Deep Slice Return)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Trả Giao Bóng Cắt Sâu &amp; Bứt Tốc Chiếm Lưới (Deep Slice Return)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Tận dụng thời gian bóng bay chậm và sâu về cuối sân để ung dung băng lên thiết lập bức tường Kitchen.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Mở vợt +10°➔+18° mua 1.8–2.0s thời gian bóng lơ lửng trên không</span>
+              <a href="https://picklebase.app/tactic-deep-return" aria-label="Mở sơ đồ 3D của Trả Giao Bóng Cắt Sâu &amp; Bứt Tốc Chiếm Lưới (Deep Slice Return)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-sky-500/50 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Chiến thuật #11</span>
+                <span class="text-[11px] font-mono font-bold text-emerald-300">DUPR 4.0➔4.5+</span>
+              </div>
+              <h3 class="text-sm sm:text-base font-bold text-white">
+                <a href="https://picklebase.app/tactic-breaking-4-0" aria-label="Đọc chiến thuật đánh đôi Phá Vỡ Ngưỡng 4.0 Lên 4.5+ (Tiến Trình 3-5-7-9 &amp; Giấu Đòn)" class="hover:text-sky-300 underline decoration-sky-500/40 transition">
+                  Phá Vỡ Ngưỡng 4.0 Lên 4.5+ (Tiến Trình 3-5-7-9 &amp; Giấu Đòn)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">5 trụ cột chiến thuật loại bỏ thói quen vội vàng của trình độ 3.5–4.0 để bước lên đẳng cấp 4.5+ bền vững.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-amber-300 font-mono truncate max-w-[75%]">⚡ Nhịp 3-5-7-9 + Biên an toàn 45–60cm + Giấu đòn Bếp + Đỡ phản công Trái tay</span>
+              <a href="https://picklebase.app/tactic-breaking-4-0" aria-label="Mở sơ đồ 3D của Phá Vỡ Ngưỡng 4.0 Lên 4.5+ (Tiến Trình 3-5-7-9 &amp; Giấu Đòn)" class="text-sky-400 hover:text-white font-bold flex-shrink-0">Xem 3D ➔</a>
+            </div>
+          </article>
+      </div>
+    </section>
+
+    <!-- Section 3: 5 Interactive Training Tools -->
+    <section class="space-y-4">
+      <div class="space-y-1">
+        <h2 class="text-xl sm:text-2xl font-black text-white">🚀 3. Hệ Sinh Thái 5 Công Cụ Huấn Luyện &amp; Phân Tích Trực Tuyến</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Trải nghiệm trực tiếp các ứng dụng mô phỏng phản xạ và đánh giá chiến thuật miễn phí trên nền tảng PickleBase:</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/trainer" aria-label="Mở công cụ Đấu Trường Phản Xạ Chiến Thuật 2.5D (2.5D Rally Simulator)" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  Đấu Trường Phản Xạ Chiến Thuật 2.5D (2.5D Rally Simulator)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Mô phỏng thực chiến Isometric 60 FPS gồm 4 chế độ + 8 bài tập chuyên sâu (Đấu Bếp 2.0, Phân vùng T1-T2, Cánh cung sải vợt &amp; Swing Cam).</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/trainer" aria-label="Trải nghiệm Đấu Trường Phản Xạ Chiến Thuật 2.5D (2.5D Rally Simulator)" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Mở Công Cụ ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/dupr-quiz" aria-label="Mở công cụ Trắc Nghiệm Chẩn Đoán IQ Chiến Thuật DUPR (DUPR Rating Quiz)" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  Trắc Nghiệm Chẩn Đoán IQ Chiến Thuật DUPR (DUPR Rating Quiz)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">20 tình huống thực chiến chuẩn Pro đo lường biểu đồ Radar 5 trục, phát hiện lỗi vị trí và xuất chứng chỉ 16:9 / Story 9:16.</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/dupr-quiz" aria-label="Trải nghiệm Trắc Nghiệm Chẩn Đoán IQ Chiến Thuật DUPR (DUPR Rating Quiz)" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Mở Công Cụ ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/glossary" aria-label="Mở công cụ Từ Điển Bách Khoa 35+ Thuật Ngữ Pickleball Chuẩn Thi Đấu" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  Từ Điển Bách Khoa 35+ Thuật Ngữ Pickleball Chuẩn Thi Đấu
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Định nghĩa chuẩn hóa cơ sinh học và trích dẫn điều luật USA Pickleball 2026 cho hơn 35 thuật ngữ chuyên môn.</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/glossary" aria-label="Trải nghiệm Từ Điển Bách Khoa 35+ Thuật Ngữ Pickleball Chuẩn Thi Đấu" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Mở Công Cụ ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/matches" aria-label="Mở công cụ Đấu Trường Phân Tích Video Giải Đấu PPA &amp; MLP Pro Tour" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  Đấu Trường Phân Tích Video Giải Đấu PPA &amp; MLP Pro Tour
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Phân tích từng pha bóng thực chiến của các tay vợt hàng đầu thế giới kèm mốc thời gian (Timestamp Bookmarks).</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/matches" aria-label="Trải nghiệm Đấu Trường Phân Tích Video Giải Đấu PPA &amp; MLP Pro Tour" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Mở Công Cụ ➔</a>
+            </div>
+          </article>
+          <article class="p-4 rounded-2xl bg-slate-900/90 border border-emerald-500/30 hover:border-emerald-400 transition flex flex-col justify-between gap-2">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-emerald-300">
+                <a href="https://picklebase.app/extension" aria-label="Mở công cụ Tiện Ích Chrome PickleBase AI Coach (Manifest V3 Official)" class="hover:text-white underline decoration-emerald-500/40 transition">
+                  Tiện Ích Chrome PickleBase AI Coach (Manifest V3 Official)
+                </a>
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">Trợ lý HLV AI DUPR 5.5 tích hợp trực tiếp trên Side Panel trình duyệt Chrome hỗ trợ phân tích video YouTube.</p>
+            </div>
+            <div class="pt-2 flex justify-end">
+              <a href="https://picklebase.app/extension" aria-label="Trải nghiệm Tiện Ích Chrome PickleBase AI Coach (Manifest V3 Official)" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Mở Công Cụ ➔</a>
+            </div>
+          </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Machine-Readable Specs & Entity Verification -->
+    <section class="p-5 sm:p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3 text-xs sm:text-sm">
+      <h2 class="text-base sm:text-lg font-black text-emerald-400">🤖 4. Tài Liệu Máy Đọc (Machine-Readable Datasets, OpenAPI &amp; MCP)</h2>
+      <p class="text-slate-300 leading-relaxed">
+        Dành cho các hệ thống RAG, AI Search Engines (Google AI Overviews, Perplexity, ChatGPT Search, Claude) và các tác nhân tự trị kết nối qua giao thức Model Context Protocol:
+      </p>
+      <div class="flex flex-wrap gap-3 font-mono text-xs pt-1">
+        <a href="https://picklebase.app/llms.txt" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-emerald-300 hover:border-emerald-400 transition">llms.txt</a>
+        <a href="https://picklebase.app/llms-full.txt" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-emerald-300 hover:border-emerald-400 transition">llms-full.txt</a>
+        <a href="https://picklebase.app/openapi.json" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-sky-300 hover:border-sky-400 transition">openapi.json</a>
+        <a href="https://picklebase.app/shots.md" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 hover:border-slate-500 transition">shots.md</a>
+        <a href="https://picklebase.app/tactics.md" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 hover:border-slate-500 transition">tactics.md</a>
+        <a href="https://picklebase.app/glossary.md" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 hover:border-slate-500 transition">glossary.md</a>
+        <a href="https://www.wikidata.org/wiki/Q141814048" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-teal-500/40 text-teal-300 hover:border-teal-400 transition">Wikidata (Q141814048)</a>
+        <a href="https://doi.org/10.5281/zenodo.23582848" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-amber-500/40 text-amber-300 hover:border-amber-400 transition">CERN Zenodo DOI (10.5281/zenodo.23582848)</a>
+        <a href="https://huggingface.co/datasets/lekhoa288/picklebase-open-biomechanics" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-yellow-500/40 text-yellow-300 hover:border-yellow-400 transition">Hugging Face Dataset</a>
+        <a href="https://www.npmjs.com/package/picklebase-mcp" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-indigo-500/40 text-indigo-300 hover:border-indigo-400 transition">npm MCP SDK (v2.3.0)</a>
+        <a href="https://pypi.org/project/picklebase-mcp/" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-sky-500/40 text-sky-300 hover:border-sky-400 transition">PyPI MCP SDK</a>
+        <a href="https://clawhub.ai/aizaloapp/skills/picklebase-biomechanics-coach" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/40 text-emerald-300 hover:border-emerald-400 transition">ClawHub AI Coach Skill</a>
+        <a href="https://chromewebstore.google.com/detail/picklebase/fodnbhemeinhfbeomholngiakpbkicjg" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-purple-500/40 text-purple-300 hover:border-purple-400 transition">Chrome Web Store Extension</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800/80 py-6 mt-12 text-center text-xs text-slate-400 space-y-2">
+    <p>© 2026 <strong class="text-white">PickleBase Tactical Academy</strong> (<a href="https://picklebase.app/" class="text-emerald-400 hover:underline">picklebase.app</a>) • Kiểm định bởi HLV Nguyễn Văn Khoa (DUPR 5.5).</p>
+    <p>Ngôn ngữ: <a href="https://aizaloapp.github.io/picklebase-open-spec/" class="text-emerald-400 underline">Tiếng Việt (VI)</a> | <a href="https://aizaloapp.github.io/picklebase-open-spec/en/" class="text-sky-400 underline">English (EN)</a></p>
+  </footer>
+</body>
+</html>
