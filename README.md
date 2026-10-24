@@ -90,8 +90,13 @@ Click any shot below to open the interactive **3D Paddle Angle & Ball Clock Lab 
 | **PyPI Official MCP SDK** | [`picklebase-mcp`](https://pypi.org/project/picklebase-mcp/) | Official Python Model Context Protocol SDK on PyPI |
 | **ClawHub AI Skill Registry** | [`picklebase-biomechanics-coach`](https://clawhub.ai/aizaloapp/skills/picklebase-biomechanics-coach) | Verified AI Agent Skill on ClawHub Registry |
 | **Chrome Web Store Extension** | [**PickleBase AI Coach Side Panel**](https://chromewebstore.google.com/detail/picklebase/fodnbhemeinhfbeomholngiakpbkicjg) | Official Manifest V3 Chrome Extension (`fodnbhemeinhfbeomholngiakpbkicjg`) |
-| **DEV.to Engineering Architecture** | [**Zero-Server 3D Pickleball Biomechanics & MediaPipe Pose on the Edge**](https://dev.to/aizaloapp/building-a-zero-server-3d-pickleball-biomechanics-mediapipe-pose-coach-on-the-edge-webgl-mcp-a3n) | Engineering deep dive on WebGL, MediaPipe Pose & Edge MCP |
-| **Viblo Engineering Case Study** | [**3D WebGL Biomechanics & Edge MCP Architecture**](https://viblo.asia/p/giai-bai-toan-phan-tich-co-sinh-hoc-biomechanics-pickleball-3d-cham-diem-dong-tac-bang-mediapipe-pose-ngay-tren-trinh-duyet-webgl-edge-mcp-XP4WEZ3kL7G) | Technical case study on 3D biomechanics scoring & Edge MCP |
+| **Google Open Source Insights (`deps.dev`)** | [**npm Mirror**](https://deps.dev/npm/picklebase-mcp) · [**PyPI Mirror**](https://deps.dev/pypi/picklebase-mcp) | Google Open Source Insights dependency & package verification index (`DR 92`) |
+| **jsDelivr Global CDN (`DR 89`)** | [**`jsdelivr.com/package/npm/picklebase-mcp`**](https://www.jsdelivr.com/package/npm/picklebase-mcp) | Global CDN package directory & README mirror |
+| **Libraries.io Open Source Index (`DR 75`)** | [**npm Index**](https://libraries.io/npm/picklebase-mcp) · [**PyPI Index**](https://libraries.io/pypi/picklebase-mcp) | Cross-registry package discovery & SourceRank verification |
+| **UNPKG Edge CDN (`DR 86`)** | [**`unpkg.com/picklebase-mcp@2.3.0/package.json`**](https://unpkg.com/picklebase-mcp@2.3.0/package.json) | Immutable package manifest served on UNPKG global CDN |
+| **LinkedIn Engineering Article (`DR 98`)** | [**Computer Vision (Edge AI) & 3D Biomechanics in Pickleball**](https://www.linkedin.com/pulse/%E1%BB%A9ng-d%E1%BB%A5ng-th%E1%BB%8B-gi%C3%A1c-m%C3%A1y-t%C3%ADnh-edge-ai-m%C3%B4-ph%E1%BB%8Fng-3d-trong-hu%E1%BA%A5n-khoa-0yutc) | Applied AI & 3D kinematic simulation case study on LinkedIn Pulse |
+| **DEV.to Engineering Architecture (`DR 86`)** | [**Zero-Server 3D Pickleball Biomechanics & MediaPipe Pose on the Edge**](https://dev.to/aizaloapp/building-a-zero-server-3d-pickleball-biomechanics-mediapipe-pose-coach-on-the-edge-webgl-mcp-a3n) | Engineering deep dive on WebGL, MediaPipe Pose & Edge MCP |
+| **Viblo Engineering Case Study (`DR 72`)** | [**3D WebGL Biomechanics & Edge MCP Architecture**](https://viblo.asia/p/giai-bai-toan-phan-tich-co-sinh-hoc-biomechanics-pickleball-3d-cham-diem-dong-tac-bang-mediapipe-pose-ngay-tren-trinh-duyet-webgl-edge-mcp-XP4WEZ3kL7G) | Technical case study on 3D biomechanics scoring & Edge MCP |
 
 ---
 

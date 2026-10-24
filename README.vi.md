@@ -90,8 +90,13 @@ Bấm vào tên cú đánh bất kỳ bên dưới để mở **Phòng Thí Nghi
 | **Gói PyPI MCP SDK Chính Thức** | [`picklebase-mcp`](https://pypi.org/project/picklebase-mcp/) | Thư viện Python Model Context Protocol SDK trên PyPI |
 | **ClawHub AI Skill Registry** | [`picklebase-biomechanics-coach`](https://clawhub.ai/aizaloapp/skills/picklebase-biomechanics-coach) | Kỹ năng huấn luyện viên AI đã xác thực trên ClawHub |
 | **Tiện Ích Chrome Web Store** | [**PickleBase AI Coach Side Panel**](https://chromewebstore.google.com/detail/picklebase/fodnbhemeinhfbeomholngiakpbkicjg) | Tiện ích mở rộng Chrome Manifest V3 chính thức |
-| **Chuyên Đề Kiến Trúc DEV.to** | [**Building a Zero-Server 3D Pickleball Biomechanics & MediaPipe Pose Coach**](https://dev.to/aizaloapp/building-a-zero-server-3d-pickleball-biomechanics-mediapipe-pose-coach-on-the-edge-webgl-mcp-a3n) | Bài báo phân tích kiến trúc WebGL, MediaPipe Pose & Edge MCP trên DEV.to |
-| **Chuyên Đề Kỹ Thuật Viblo Asia** | [**Giải Bài Toán Cơ Sinh Học Pickleball 3D**](https://viblo.asia/p/giai-bai-toan-phan-tich-co-sinh-hoc-biomechanics-pickleball-3d-cham-diem-dong-tac-bang-mediapipe-pose-ngay-tren-trinh-duyet-webgl-edge-mcp-XP4WEZ3kL7G) | Bài báo phân tích kiến trúc MediaPipe Pose, WebGL & Edge MCP trên Viblo |
+| **Google Open Source Insights (`deps.dev`)** | [**Bản sao npm**](https://deps.dev/npm/picklebase-mcp) · [**Bản sao PyPI**](https://deps.dev/pypi/picklebase-mcp) | Chỉ mục kiểm định gói nguồn mở chính thức của Google (`DR 92`) |
+| **jsDelivr Global CDN (`DR 89`)** | [**`jsdelivr.com/package/npm/picklebase-mcp`**](https://www.jsdelivr.com/package/npm/picklebase-mcp) | Trang danh bạ CDN toàn cầu & bản sao tài liệu kỹ thuật |
+| **Chỉ Mục Nguồn Mở Libraries.io (`DR 75`)** | [**Chỉ mục npm**](https://libraries.io/npm/picklebase-mcp) · [**Chỉ mục PyPI**](https://libraries.io/pypi/picklebase-mcp) | Trang tổng hợp đa kho gói phần mềm & chấm điểm SourceRank |
+| **UNPKG Edge CDN (`DR 86`)** | [**`unpkg.com/picklebase-mcp@2.3.0/package.json`**](https://unpkg.com/picklebase-mcp@2.3.0/package.json) | Siêu dữ liệu định danh gói trên mạng lưới UNPKG toàn cầu |
+| **Chuyên Đề LinkedIn Pulse (`DR 98`)** | [**Ứng Dụng Thị Giác Máy Tính (Edge AI) & Mô Phỏng 3D Trong Pickleball**](https://www.linkedin.com/pulse/%E1%BB%A9ng-d%E1%BB%A5ng-th%E1%BB%8B-gi%C3%A1c-m%C3%A1y-t%C3%ADnh-edge-ai-m%C3%B4-ph%E1%BB%8Fng-3d-trong-hu%E1%BA%A5n-khoa-0yutc) | Bài phân tích chuyên sâu ứng dụng Edge AI & cơ sinh học 3D trên LinkedIn |
+| **Chuyên Đề Kiến Trúc DEV.to (`DR 86`)** | [**Building a Zero-Server 3D Pickleball Biomechanics & MediaPipe Pose Coach**](https://dev.to/aizaloapp/building-a-zero-server-3d-pickleball-biomechanics-mediapipe-pose-coach-on-the-edge-webgl-mcp-a3n) | Bài báo phân tích kiến trúc WebGL, MediaPipe Pose & Edge MCP trên DEV.to |
+| **Chuyên Đề Kỹ Thuật Viblo Asia (`DR 72`)** | [**Giải Bài Toán Cơ Sinh Học Pickleball 3D**](https://viblo.asia/p/giai-bai-toan-phan-tich-co-sinh-hoc-biomechanics-pickleball-3d-cham-diem-dong-tac-bang-mediapipe-pose-ngay-tren-trinh-duyet-webgl-edge-mcp-XP4WEZ3kL7G) | Bài báo phân tích kiến trúc MediaPipe Pose, WebGL & Edge MCP trên Viblo |
 
 ---
 
